@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="../css/Login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="../js/Login.js"></script>
 
 </head>
 
 <body>
     <div class="center">
-        <h1>Login</h1>
+        <h1>Cadastro</h1>
             
             <form action="" method="post">
+                <div class="txt_field">
+                    <input type="text" name="" id="nome" required>
+                    <label for="nome">Nome</label>
+                    <span></span>
+                </div>
+
+                <div>
+                    <label id="lblnasc" for="nasc">Data de Nascimento</label>
+                    <input type="date" id="nasc">
+                </div>
+
                 <div class="txt_field">
                     <input type="text" name="" id="usuario" required>
                     <label for="usuario">Usuário</label>
@@ -25,22 +35,21 @@
                 <div class="txt_field">
                     <input type="password" name="" id="senha" required>
                     <label for="senha">Senha</label>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
                     <span></span>                    
                 </div>
-                
-                <div class="pass">
-                    Esqueceu a senha?
+
+                <div class="txt_field">
+                    <input type="password" name="" id="confirmsenha" required>
+                    <label for="senha">Confirmar Senha</label>
+                    <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+                    <span></span>                    
                 </div>
+                 
+                <button>Cadastrar</button>
                 
-                <input type="submit" value="Login">
-                
-                <div class="signup_link">
-                    Não é membro? <a href="#">Inscreva-se</a>
-                </div>
             </form>
         
-    </div>
-    
+    </div>    
 </body>
 </html>
