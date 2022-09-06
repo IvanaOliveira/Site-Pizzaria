@@ -5,6 +5,8 @@ body{
     font-family: montserrat;
     background: linear-gradient(120deg, rgba(247, 247, 87, 0.705), rgba(248, 89, 89, 0.829) );
     height: 100vh;
+
+    /*Barra de Rolagem*/
     overflow: hidden;
 }
 
@@ -16,6 +18,15 @@ body{
     width: 400px;
     background: white;
     border-radius: 10px;
+}
+
+.cadast{
+    top: 50%;
+    height: 90%;
+    
+    /*Barra de Rolagem*/
+    overflow-y: scroll;
+
 }
 
 .center h1{
@@ -30,10 +41,16 @@ body{
     box-sizing: border-box;
 }
 
+#formcadast{
+    padding: 0 40px;
+    box-sizing: border-box;
+    
+}
+
 form .txt_field{
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    margin: 18px 0;
 }
 
 .txt_field input{
@@ -125,34 +142,6 @@ input[type="submit"]:hover{
 }
 
 
-/*.centerc{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
-}
-
-.centerc h1{
-    text-align: center;
-    color: #666666;
-    padding: 0 0 18px 0;
-    border-bottom: 1px solid silver;   
-}
-
-.centerc form{
-    padding: 0 40px 0;
-    box-sizing: border-box;
-}
-
-form .txt{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
-}retirado do código*/
-
 .txt label{
     position: absolute;
     top: 10%;
@@ -208,4 +197,24 @@ button:hover{
     right: 10px;
     cursor: pointer;
     color: #a6a6a6;
+}
+
+
+/* Barra de Rolagem */
+
+/* Fundo que Corre */
+
+::-webkit-scrollbar-track{
+    background-color: #adadad;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: #adadad;
+}
+
+/* Linha que desce */
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(120deg, rgba(255, 255, 0, 0.705), rgba(255, 0, 0, 0.829) );
+    border-radius: 3px;
 }
