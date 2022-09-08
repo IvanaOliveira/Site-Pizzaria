@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Food</title>
+    <link rel="stylesheet" href="../css/Index.css">
+
+</head>
+
+<!-- Cabeçalho -->
+<header class="container">
+    <h1><img src="../img/logo.jpg" alt="Logo Pizzaria Food"></h1>
+
+    <img id="titulo" src="../img/Pizzaria.png" alt="">
+
+    <p class="sacola">
+        Nenhum item na sacola de compras
+    </p>
+
+    <!--
+    <nav class="menu-opcoes">
+        <ul>
+            <li><a href="Usuarios.html">Usuários</a></li>
+            <li><a href="Pedidos.html">Pedidos</a></li>
+        </ul>			
+    </nav>
+-->
+
+</header>
+
+
+<body>
+
+    <div class="car">
+        <div class="tit"><img src="../img/car.png" alt="Carrinho">
+            Seu Pedido
+        </div>
+            
+            <form id="formcadast" action="" method="post">
+                
+                <p>Quantidade</p>
+
+                <div class="quant">
+                    <input type="text" name="" id="pizza" required>
+                    <label for="pizza">Pizza de Portuguesa</label>
+                    <span></span>
+                </div>
+                
+                <div class="txt_field">
+                    <label for="pizzac">Comentário:</label>
+                    <input type="text" name="" id="pizzac" required>
+                    <span></span>
+                </div>
+
+                <div class='form-row'>
+                    <h3>Forma de Pagamento</h3>
+
+                    <label class='checkbox-label' for='available'>
+                    <input id='available'
+                           name='available'
+                           type='checkbox'
+                           value='is-available'/>
+                    <span>Dinheiro</span>
+                    </label>
+
+                    <label class='checkbox-label' for='available'>
+                        <input id='available'
+                               name='available'
+                               type='checkbox'
+                               value='is-available'/>
+                        <span>Cartão</span>
+                    </label>
+
+                    <p><label class='checkbox-label' for='available'>
+                        <input id='available'
+                               name='available'
+                               type='checkbox'
+                               value='is-available'/>
+                        <span>Chave Pix 080.000.000-00</span>
+                    </label>
+                    </p>
+                
+                    <div class="txt_field">
+                        <label for="pizzac">Comentário:</label>
+                        <input type="text" name="" id="pizzac" required>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <p></p><button>Finalizar</button>
+
+            </form>        
+    </div>
+
+<button id="compra">Continuar Comprando</button>
+
+</body>
+</html>
