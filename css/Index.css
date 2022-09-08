@@ -143,6 +143,25 @@ button:hover{
 	left: 80px;
 }
 
+.ped{
+    position: absolute;
+    transform: translate(10%, -57%);
+    width: 340px;
+    background: white;
+    border-radius: 10px;
+
+	margin: 0;
+	padding: 0 0 0 20px;
+	
+    top: 60%;
+
+	position: relative;
+	float: left;
+
+}
+.ped h3{
+	text-align: center;
+}
 
 /* Barra de Rolagem */
 
