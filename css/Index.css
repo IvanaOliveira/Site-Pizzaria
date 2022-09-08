@@ -114,6 +114,35 @@ button:hover{
 	color: red;
 }
 
+.user{
+    position: absolute;
+    transform: translate(10%, -57%);
+    width: 340px;
+    background: white;
+    border-radius: 10px;
+
+	margin: 0;
+	padding: 0 0 0 20px;
+	
+    top: 50%;
+
+	position: relative;
+	float: left;
+
+}
+#formcadast{
+	color: #adadad;
+    font-size: 16px;
+}
+.user h3{
+	text-align: center;
+}
+.user button{
+	position: relative;
+	margin: auto;
+	left: 80px;
+}
+
 
 /* Barra de Rolagem */
 
