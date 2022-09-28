@@ -9,6 +9,7 @@
 <!--Boot strap para icone de olhos-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
+ 
 
 </head>
 
@@ -19,7 +20,7 @@
             <form id="formcadast" action="" method="post">
                 <div class="txt_field">
                     <input type="text" name="" id="nome" required>
-                    <label for="nome">Nome</label>
+                    <label id="lblNome" for="nome">Nome</label>
                     <span></span>
                 </div>
 
@@ -29,33 +30,33 @@
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" name="" id="tel" required>
-                    <label for="tel">Telefone</label>
+                    <input type="text" name="" id="tel" class="form-control" onkeypress="$ (this).mask ('(00) 00000-0000')" required>
+                    <label id="lblTel" for="tel">Telefone</label>
                     <span></span>
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" name="" id="usuario" required>
-                    <label for="usuario">Usuário / e-mail</label>
+                    <input type="email" name="" id="usuario" required>
+                    <label id="lblUser" for="usuario">Usuário / e-mail</label>
                     <span></span>
                 </div>
                 
                 <div class="txt_field">
                     <input type="password" name="" id="senha" required>
-                    <label for="senha">Senha</label>
+                    <label id="lblSenha" for="senha">Senha</label>
                     <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
                     <span></span>                    
                 </div>
 
                 <div class="txt_field">
                     <input type="password" name="" id="confirmsenha" required>
-                    <label for="senha">Confirmar Senha</label>
+                    <label id="lblConf" for="senha">Confirmar Senha</label>
                     <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
                     <span></span>                    
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" name="" id="cep" required>
+                    <input type="text" name="" id="cep" class="form-control" onkeypress="$ (this).mask ('00.000-000')" required>
                     <label for="cep">CEP</label>
                     <span></span>
                 </div>
@@ -90,13 +91,17 @@
                     <span></span>
                 </div>
 
-                <button>Cadastrar</button>
+                <button onclick="cadastrar()">Cadastrar</button>
                 
             </form>
         
     </div>
     
     <script src="../js/Cadastro.js"></script>
+<!--Boot strap para formato do campo Telefone-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    
 
 </body>
 </html>
