@@ -9,3 +9,4 @@ btn.addEventListener('click', ()=>{
         inputSenha.setAttribute('type', 'password')
     }
 })
+
