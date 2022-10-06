@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.png">
+    
     <title>Pizzaria Food</title>
     <link rel="stylesheet" href="../css/Index.css">
 </head>
@@ -14,14 +16,21 @@
 
     <img id="titulo" src="../img/Pizzaria.png" alt="" >
 
-    <p class="sacola">
-        Nenhum item na sacola de compras
-    </p>
+    <div>
+        <a href="../html/Carrinho.html">
+            <p class="sacola">
+                <span>0 '</span>
+            </p>
+        </a>
+    </div>
+    
 </header>
+<!-- Cabeçalho -->
 
 
 <body>
 
+    <!-- .busca -->
     <section class="busca">
 
         <form>
@@ -40,6 +49,7 @@
 
     </section><!-- fim .busca -->
 
+    <!-- Opções de pizzas -->
     <div class="container paineis">
         <section class="pizza">
             <div><h3>Pizza de Frango</h3>
@@ -54,7 +64,8 @@
             <label>Frango, mussarela e azeitona</label>					
             </div>
             
-            <button>Comprar</button>
+            <!--<input id="btC" type="button" title="teste" value="compra"></input> -->
+            <button id="btC" type="button" >Comprar</button> 
 
         </section>
 
@@ -179,6 +190,43 @@
         </section>
 
     </div>
+    <!-- Opções de pizzas -->
+
+    <!-- janela modal .pizzaWindowArea -->
+    <div class="pizzaWindowArea">
+        <div class="pizzaWindowBody">
+            <div class="pizzaInfo--cancelMobileButton">Voltar</div>
+            <div class="pizzaBig">
+                <img src="" />
+            </div>
+            <div class="pizzaInfo">
+                <h1>--</h1>
+                <div class="pizzaInfo--desc">--</div>
+                <div class="pizzaInfo--sizearea">
+                    <div class="pizzaInfo--sector">Tamanho</div>
+                    <div class="pizzaInfo--sizes">
+                        <div data-key="P" class="pizzaInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="pizzaInfo--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--pricearea">
+                    <div class="pizzaInfo--sector">Preço</div>
+                    <div class="pizzaInfo--price">
+                        <div class="pizzaInfo--actualPrice">R$ --</div>
+                        <div class="pizzaInfo--qtarea">
+                            <button class="pizzaInfo--qtmenos">-</button>
+                            <div class="pizzaInfo--qt">1</div>
+                            <button class="pizzaInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                <div class="pizzaInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .pizzaWindowArea -->
 
 </body>
 </html>

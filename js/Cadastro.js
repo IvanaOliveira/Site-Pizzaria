@@ -70,14 +70,16 @@ nome.addEventListener('keyup', () => {
 })
 
 nasc.addEventListener('keyup', ()=> {
-    if(nasc.value.length < 2){ //Se valor incorreto ao padrão
+    if(nasc.value == ""){ //Se valor incorreto ao padrão
         lblNasc.setAttribute('style','color: red')
-        lblNasc.innerHTML = 'Data de Nascimento / e-mail <strong> * </strong>'
+        lblNasc.innerHTML = 'Data de Nascimento <strong> * </strong>'
         validNasc = false
+        console.log('vazio')
     } else{
         lblNasc.setAttribute('style','color: #adadad')
         lblNasc.innerHTML = 'Data de Nascimento'
         validNasc = true
+        console.log('preenchido')
     }
 })
 
@@ -146,7 +148,7 @@ cep.addEventListener('keyup', () => {
 
 city.addEventListener('keyup', () => {
 
-    if(city.value.length < 3){ //Se valor incorreto ao padrão
+    if(city.value != ""){ //Se valor incorreto ao padrão
         lblCity.setAttribute('style','color: red')
         lblCity.innerHTML = 'Cidade <strong> * </strong>'
         validCity = false
@@ -249,9 +251,12 @@ function buscaCep(){
                 document.getElementById("estado").value = endereco.state;
                 document.getElementById("rua").value = endereco.street;
                 document.getElementById("bairro").value = endereco.neighborhood;
+                console.log('cep ok')
             }
             else if (req.status === 404) {
-                alert("CEP inválido");
+                //alert("CEP inválido");
+                document.getElementById('cidade').value = 'Endereço não encontrado';
+
             }
             else{
                 alert("Erro ao fazer a requisição");
@@ -269,9 +274,12 @@ window.onload = function(){
 
 //Função do botão Cadastrar
 function cadastrar(){
+
+    //console.log('clicou')
     
-    if(validNome && validNasc && validTel && validUser && validSenha && validConf && validCep && validCity && validEstado && validRua && validNum && validBairro){
+    if(validNome && validTel && validUser && validSenha && validConf && validCep && validNum ){
     
+        //alert('ok')
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
         listaUser.push(
@@ -307,5 +315,6 @@ function cadastrar(){
         msgErro.innerHTML = '<strong> Preencha todos os campos corretamente. </strong>'
         msgSucesso.setAttribute('style', 'display: none')
         msgSucesso.innerHTML = ''
+        //alert('deu ruim')
     }
 }
