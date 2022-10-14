@@ -7,9 +7,9 @@ let nome = document.querySelector('#nome')
 let lblNome = document.querySelector('#lblNome')
 let validNome = false
 
-let nasc = document.querySelector('#nasc')
+/*let nasc = document.querySelector('#nasc')
 let lblNasc = document.querySelector('#lblNasc')
-let validNasc = false
+let validNasc = false*/
 
 let tel = document.querySelector('#tel')
 let lblTel = document.querySelector('#lblTel')
@@ -69,7 +69,7 @@ nome.addEventListener('keyup', () => {
     }   
 })
 
-nasc.addEventListener('keyup', ()=> {
+/*nasc.addEventListener('keyup', ()=> {
     if(nasc.value == ""){ //Se valor incorreto ao padrão
         lblNasc.setAttribute('style','color: red')
         lblNasc.innerHTML = 'Data de Nascimento <strong> * </strong>'
@@ -81,7 +81,7 @@ nasc.addEventListener('keyup', ()=> {
         validNasc = true
         console.log('preenchido')
     }
-})
+})*/
 
 tel.addEventListener('keyup', () => {
     if(tel.value.length < 15){ //Se valor incorreto ao padrão
@@ -285,7 +285,7 @@ function cadastrar(){
         listaUser.push(
             {
                 nomeCad: nome.value,
-                nascCad: nasc.value,
+                //nascCad: nasc.value,
                 telCad: tel.value,
                 userCad: usuario.value,
                 senhaCad: senha.value,
@@ -294,7 +294,7 @@ function cadastrar(){
                 estadoCad: estado.value,
                 ruaCad: rua.value,
                 numCad: numero.value,
-                bairroCad: bairro
+                bairroCad: bairro.value
             }
         )
 
@@ -318,3 +318,6 @@ function cadastrar(){
         //alert('deu ruim')
     }
 }
+
+//Erro ao colocar Data, o botão não leva a pagina de login, mas se não colocar a data funciona normalmente.
+//Porem se retirar o campo data continua o erro

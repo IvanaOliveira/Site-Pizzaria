@@ -9,7 +9,12 @@ pizzaItem.querySelector('.pizza button').addEventListener('compra',(e) =>{
     console.log('clicou na pizza')
 })
 
+//let userLogado = localStorage.getItem('userLogado')
 
+if(localStorage.getItem('token') == null){
+    alert('Você precisa estar logado!')
+    window.location.href = '../html/Login.html'
+}
 
 
 /*function compra(e){

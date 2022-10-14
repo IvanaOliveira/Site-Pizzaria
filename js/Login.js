@@ -13,6 +13,8 @@ btn.addEventListener('click', ()=>{
 
 //Função do botão Cadastrar
 function entrar(){
+
+  console.log('botão clicado')
     let usuario = document.querySelector('#usuario')
     let userLabel = document.querySelector('#lblUser')
     
@@ -29,6 +31,8 @@ function entrar(){
     }
     
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
+
+    //console.log(listaUser)
     
     listaUser.forEach((item) => {
       if(usuario.value == item.userCad && senha.value == item.senhaCad){
@@ -42,22 +46,33 @@ function entrar(){
       }
     })
      
+    //console.log(userValid)
+
     if(usuario.value == userValid.user && senha.value == userValid.senha){
+
+      console.log ('Deu certo')
+
       window.location.href = '../html/Index.html'
       
-      let mathRandom = Math.random().toString(16).substr(2)
+      let mathRandom = Math.random().toString(16).substring(2)
       let token = mathRandom + mathRandom
+
+      console.log(token)
       
       localStorage.setItem('token', token)
-      localStorage.setItem('userLogado', JSON.stringify(userValid))
+      //localStorage.setItem('userLogado', JSON.stringify(userValid))
+
     } else {
+      
+      console.log('Deu errado')
       userLabel.setAttribute('style', 'color: red')
-      usuario.setAttribute('style', 'border-color: red')
+      userLabel.innerHTML = 'Usuário / e-mail <strong> * </strong>'
       senhaLabel.setAttribute('style', 'color: red')
-      senha.setAttribute('style', 'border-color: red')
+      senhaLabel.innerHTML = 'Senha <strong> * </strong>'
+
       msgErro.setAttribute('style', 'display: block')
       msgErro.innerHTML = 'Usuário ou senha incorretos'
       usuario.focus()
     }
     
-  }
+}
